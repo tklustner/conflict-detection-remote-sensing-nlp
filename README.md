@@ -40,4 +40,4 @@ Included in [`data/sample_inputs/`](data/sample_inputs/) are:
 Verifying violent events with multi-source data fusion supports:
 - Detecting burned villages and scorched-earth patterns
 - Identifying underreported or delayed conflict activity
-- Informing humanitarian response and accountability work
+- Informing timely humanitarian response and accountability work
