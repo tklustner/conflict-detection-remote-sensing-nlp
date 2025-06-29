@@ -22,3 +22,22 @@ python src/satellite/run_fusion.py \
   --sat_path data/sample_inputs/ndvi_sample.geojson \
   --output_path outputs/output_fused_matches.gpkg \
   --delta_days 14
+
+**Arguments**:
+- `--text_path`: path to conflict reports file (GeoPackage or GeoJSON)
+- `--sat_path`: path to NDVI change detections (GeoJSON)
+- `--output_path`: where to save matched output (GeoPackage or GeoJSON)
+- `--delta_days`: (optional) max days between conflict and satellite change
+
+## 📁 Example Inputs
+
+Included in [`data/sample_inputs/`](data/sample_inputs/) are:
+- `gdf_text_sample.gpkg`: dummy conflict reports from northern Shan State, Myanmar
+- `ndvi_sample.geojson`: simulated vegetation loss zones
+
+## 📌 Why This Matters
+
+Verifying violent events with multi-source data fusion supports:
+- Detecting burned villages and scorched-earth patterns
+- Identifying underreported or delayed conflict activity
+- Informing humanitarian response and accountability work
