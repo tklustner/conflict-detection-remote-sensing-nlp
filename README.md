@@ -1,15 +1,24 @@
 # conflict-detection-remote-sensing-nlp
-A Streamlit application that scrapes open-source conflict reports, extracts geolocated events, and measures environmental change (e.g., vegetation loss) in their aftermath using satellite imagery.
+
+A Streamlit-ready pipeline that fuses open-source conflict reports with satellite-based land change detections (e.g., NDVI drops). Designed to verify violence-linked environmental change and support humanitarian monitoring in real-world settings like Myanmar.
+
+---
+
+## 🛰 Overview
+
+This project:
+- Scrapes or accepts geolocated conflict reports
+- Detects NDVI-based vegetation change using Sentinel-2 imagery
+- Matches events to land change via spatial + temporal rules
+- Outputs a GeoDataFrame for inspection or downstream analysis
+
+---
 
 ## 🚀 How to Run the Fusion Pipeline
 
+```bash
 python src/satellite/run_fusion.py \
- --text_path data/sample_inputs/gdf_text_sample.gpkg \
---sat_path data/sample_inputs/ndvi_sample.geojson \
-  --output_path path/to/output_fused_matches.gpkg \
+  --text_path data/sample_inputs/gdf_text_sample.gpkg \
+  --sat_path data/sample_inputs/ndvi_sample.geojson \
+  --output_path outputs/output_fused_matches.gpkg \
   --delta_days 14
-
-- `text_path`: path to a GeoPackage or GeoJSON file containing geolocated conflict reports
-- `sat_path`: path to a GeoJSON file containing NDVI-based change detections
-- `output_path`: path to save the matched output (GeoPackage or GeoJSON)
-- `delta_days`: (optional) maximum time difference (in days) allowed between report and satellite detection 
