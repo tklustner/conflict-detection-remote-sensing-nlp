@@ -1,0 +1,8 @@
+geopandas
+pandas
+shapely
+geopy
+spacy
+geemap
+earthengine-api
+streamlit
